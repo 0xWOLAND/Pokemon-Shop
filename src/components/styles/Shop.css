@@ -1,0 +1,7 @@
+#pokemon_card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto;
+    width: 50%;
+}

@@ -1,0 +1,10 @@
+.pokemon_card {
+    background-color: rgb(204, 204, 204);
+    margin: 30px;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

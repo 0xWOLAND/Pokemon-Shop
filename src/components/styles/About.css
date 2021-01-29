@@ -1,0 +1,18 @@
+#about_info{
+    width: 100%;
+}
+
+#about_info div {
+    width: 640px; /* Can be in percentage also. */
+    height: auto;
+    margin: 10px auto;
+    padding: 10px;
+    position: relative;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#about_info div p {
+    line-height: 25px;
+    
+}
