@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import Pokemon from "./Pokemon";
-import "./styles/Shop.css"
+import "./styles/Shop.css";
 function getNumber(str) {
   let t = 0;
   for (let i = str.length - 2; i >= 0; i--) {
@@ -11,10 +11,7 @@ function getNumber(str) {
   }
   let ans = str.substr(t + 1, str.length - 1);
   ans = ans.substr(0, ans.length - 1);
-  let url =
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
-    ans +
-    ".png";
+  let url = "https://pokeapi.co/api/v2/pokemon/" + ans;
   return url;
 }
 
@@ -38,7 +35,7 @@ function Shop() {
       <div id="pokemon_card_container">
         {results.map((item) => (
           <div>
-            <Pokemon name={item.name} image={getNumber(item.url)} />
+            <Pokemon name={item.name} url={getNumber(item.url)} />
           </div>
         ))}
       </div>
