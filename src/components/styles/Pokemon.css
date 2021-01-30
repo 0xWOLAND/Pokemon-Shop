@@ -12,6 +12,16 @@
   color: whi;
 }
 
+.pokemon_link{
+  text-decoration: none;
+  color: inherit;
+}
+
+.pokemon_link:active{
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .bug {
   border-color: #a8b820;
   background-color: #a9b82080;
