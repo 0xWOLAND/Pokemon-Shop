@@ -7,7 +7,7 @@ function Nav() {
     return (
     <nav>
         <h2>Pokemon</h2>
-        <ul>
+        <ul id="nav">
             <Link className="link" to="/about">About</Link>
             <Link className="link" to="/shop">Shop</Link>
         </ul>

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./styles/Info.css"
+import "./styles/Info.css";
+import SpriteSwitcher from "./SpriteSwitcher";
+
 function Info(props) {
   const [item, setItem] = useState();
   const url = " https://pokeapi.co/api/v2/pokemon/" + props.match.params.id;
@@ -16,12 +18,51 @@ function Info(props) {
   if (item != null) {
     return (
       <div id="pokemon_info">
-        <img src={item.sprites.front_shiny} width={100} />
-        <h1>{item.name}</h1>
+        <div className="basic_info">
+          <SpriteSwitcher item={item} />
+          <h1>{item.name}</h1>
+          <h3>Base Experience: {item.base_experience}</h3>
+        </div>
+        <div id="stats_container">
+          <div className="container">
+            <h2>Abilities</h2>
+            <ul>
+              {item.abilities.map((e) => (
+                <li>{e.ability.name}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="container">
+            <h2>Stats</h2>
+            <ul>
+              {item.stats.map((stat) => (
+                <li>
+                  {stat.stat.name}: {stat.base_stat}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="container">
+            <h2>Types</h2>
+            <ul>
+              {item.types.map((type) => (
+                <li>{type.type.name}</li>
+              ))}
+            </ul>
+          </div>
+          <div id="moves">
+            <div class="scrolling-wrapper">
+              {item.moves.map((move) => (
+                <div class="card">
+                  <h2>{move.move.name}</h2>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     );
-  }
-  else return <div></div>
+  } else return <div></div>;
 }
 
 export default Info;

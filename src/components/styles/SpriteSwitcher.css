@@ -1,0 +1,45 @@
+#sprite_switcher {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#sprite_switcher_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Arrows */
+
+.pic {
+  margin: 0 50px 0 50px; /* demo spacing */
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+}
+
+.arrow-left {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #272822;
+  cursor: pointer;
+}
+.arrow-right {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #272822;
+  cursor: pointer;
+}
+
+.arrow-left:hover {
+  border-right: 20px solid #f92672;
+  transition: all 500ms ease-out;
+}
+
+.arrow-right:hover {
+  border-left: 20px solid #f92672;
+  transition: all 500ms ease-out;
+}

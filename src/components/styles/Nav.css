@@ -19,7 +19,7 @@ nav {
     align-items: center;
 }
 
-ul {
+#nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
