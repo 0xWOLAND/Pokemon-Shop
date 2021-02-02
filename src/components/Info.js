@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./styles/Info.css";
 import SpriteSwitcher from "./SpriteSwitcher";
-
+import { Link } from "react-router-dom";
 function Info(props) {
   const [item, setItem] = useState();
   const url = " https://pokeapi.co/api/v2/pokemon/" + props.match.params.id;
@@ -50,13 +50,18 @@ function Info(props) {
               ))}
             </ul>
           </div>
-          <div id="moves">
-            <div class="scrolling-wrapper">
-              {item.moves.map((move) => (
-                <div class="card">
-                  <h2>{move.move.name}</h2>
-                </div>
-              ))}
+          <h1 id="moves_title">Moves</h1>
+          <div id="moves_container">
+            <div id="moves">
+              <div class="scrolling-wrapper">
+                {item.moves.map((move) => (
+                  <div class="card">
+                    <div id="name_container">
+                      <h2>{move.move.name}</h2>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

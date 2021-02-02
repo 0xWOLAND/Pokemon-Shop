@@ -29,15 +29,22 @@
 #stats_container {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: 250px 250px;
+  grid-template-rows: 250px 50px 250px;
 }
 
-#moves {
-  height: 230px;
+#moves_container {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  width: 100%;
   grid-column: 1/ 4;
+  height: 250px;
+  
+}
+#moves_title {
+  width: 100px;
+  grid-column: 1/ 4;
+  margin: 0 auto;
 }
 
 #moves .card {
@@ -53,14 +60,21 @@
   margin-right: 3px;
 }
 .card {
-  margin: 10px;
-  width: 150px;
-  height: 150px;
+  margin: 20px;
+  width: 200px;
+  height: 200px;
   color: white;
-  border-radius: 16px;
+  border-radius: 100%;
   background: black;
 }
 
+#name_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 .scrolling-wrapper,
 .scrolling-wrapper-flexbox {
   height: 150px;
@@ -68,11 +82,10 @@
   width: 100%;
 }
 ::-webkit-scrollbar {
-  width: 0px;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: #F92672;
-
+  background: #f92672;
 }
