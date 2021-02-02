@@ -4,9 +4,8 @@ import Nav from "./components/Nav";
 import Shop from "./components/Shop";
 import About from "./components/About";
 import Home from "./components/Home";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Info from "./components/Info";
-
 function App() {
   return (
     <Router>

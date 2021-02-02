@@ -37,3 +37,7 @@ nav {
     color: #F92672;
     transition: all 500ms ease-out;
 }
+
+#github {
+    cursor: pointer;
+}
