@@ -1,5 +1,6 @@
 Pokemon Shop using NodeJS, ReactJS, PokeAPI, and React Router. Uses hooks instead of ancient classes from pre-version 16.04 ReactJS.
-
+# Medium Article
+Read the article at Medium [here](https://bhargav-annem.medium.com/pokemon-shop-react-router-reactjs-and-apis-96d06f839fa8). In this article, I provide a synopsis of this project as well as information about how to setup this project.
 ## Available Scripts
 
 In the project directory, you can run:
